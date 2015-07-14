@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPLocalBusinessView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_registered_business" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-2s-seD">
+                    <rect key="frame" x="8" y="8" width="34" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="cBN-nN-BKE"/>
+                        <constraint firstAttribute="height" constant="32" id="e41-Se-L0j"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Business" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7c-md-GgT">
+                    <rect key="frame" x="45" y="15" width="104" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGB-Cs-Wkp">
+                    <rect key="frame" x="10" y="43" width="310" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="4B5-sn-BTR"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="luB-iN-fCV">
+                    <rect key="frame" x="8" y="52" width="304" height="508"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="gea-Ub-ysx">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="krt-Lb-Sms"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="zjs-NN-oYL"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WGB-Cs-Wkp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6QR-um-OXz"/>
+                <constraint firstItem="luB-iN-fCV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6hs-kz-5Z0"/>
+                <constraint firstItem="luB-iN-fCV" firstAttribute="top" secondItem="WGB-Cs-Wkp" secondAttribute="top" constant="9" id="9Bs-vq-7YU"/>
+                <constraint firstAttribute="trailing" secondItem="WGB-Cs-Wkp" secondAttribute="trailing" id="XeM-Kv-doX"/>
+                <constraint firstAttribute="trailing" secondItem="luB-iN-fCV" secondAttribute="trailing" constant="8" id="YrP-WO-qnl"/>
+                <constraint firstItem="Zzu-2s-seD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="aql-Yh-Q7L"/>
+                <constraint firstAttribute="bottom" secondItem="luB-iN-fCV" secondAttribute="bottom" constant="8" id="b4n-Mb-mj3"/>
+                <constraint firstItem="a7c-md-GgT" firstAttribute="leading" secondItem="Zzu-2s-seD" secondAttribute="trailing" constant="3" id="f7e-n0-mUF"/>
+                <constraint firstItem="WGB-Cs-Wkp" firstAttribute="top" secondItem="Zzu-2s-seD" secondAttribute="bottom" constant="3" id="mhP-uI-1Wg"/>
+                <constraint firstItem="Zzu-2s-seD" firstAttribute="centerY" secondItem="a7c-md-GgT" secondAttribute="centerY" constant="0.5" id="pMt-G6-hUT"/>
+                <constraint firstItem="Zzu-2s-seD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="tD8-cq-AYG"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="collectionView" destination="luB-iN-fCV" id="1CP-8Y-X9h"/>
+                <outlet property="lineSeparator" destination="WGB-Cs-Wkp" id="vHm-HZ-UJf"/>
+                <outlet property="lineSeparatorHeightConstraint" destination="4B5-sn-BTR" id="xGQ-7C-D7Z"/>
+            </connections>
+            <point key="canvasLocation" x="387" y="184"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_registered_business" width="27" height="23"/>
+    </resources>
+</document>

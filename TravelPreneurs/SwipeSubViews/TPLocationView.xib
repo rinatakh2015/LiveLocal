@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPLocationView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-8w-0R6">
+                    <rect key="frame" x="36" y="15" width="60" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5w-fW-jdv">
+                    <rect key="frame" x="10" y="43" width="310" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pPD-K0-0QR"/>
+                    </constraints>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="21V-cH-pZ3">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                </mapView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_location" translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-zA-FzS">
+                    <rect key="frame" x="8" y="8" width="25" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="aDF-3Q-5Hs"/>
+                        <constraint firstAttribute="height" constant="32" id="c2c-Rg-vsG"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mkf-zA-FzS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="OdF-8N-6DT"/>
+                <constraint firstAttribute="trailing" secondItem="21V-cH-pZ3" secondAttribute="trailing" id="WVx-r6-Umo"/>
+                <constraint firstItem="NaE-8w-0R6" firstAttribute="leading" secondItem="Mkf-zA-FzS" secondAttribute="trailing" constant="3" id="XQl-7K-PMM"/>
+                <constraint firstItem="z5w-fW-jdv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="YEO-mi-n63"/>
+                <constraint firstItem="21V-cH-pZ3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gTR-Mf-Rj7"/>
+                <constraint firstAttribute="trailing" secondItem="z5w-fW-jdv" secondAttribute="trailing" id="nmP-M9-02S"/>
+                <constraint firstItem="z5w-fW-jdv" firstAttribute="top" secondItem="Mkf-zA-FzS" secondAttribute="bottom" constant="3" id="qUp-XJ-Txy"/>
+                <constraint firstAttribute="bottom" secondItem="21V-cH-pZ3" secondAttribute="bottom" id="sZM-iU-CTd"/>
+                <constraint firstItem="Mkf-zA-FzS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="zOv-UG-Qhw"/>
+                <constraint firstItem="21V-cH-pZ3" firstAttribute="top" secondItem="z5w-fW-jdv" secondAttribute="bottom" id="zR1-QH-vnr"/>
+                <constraint firstItem="Mkf-zA-FzS" firstAttribute="centerY" secondItem="NaE-8w-0R6" secondAttribute="centerY" constant="0.5" id="zeO-wo-Wys"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="lineSeparatorHeightConstraint" destination="pPD-K0-0QR" id="7Yh-jm-Q1z"/>
+                <outlet property="mMapView" destination="21V-cH-pZ3" id="Yj1-f8-Q84"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_location" width="20" height="28"/>
+    </resources>
+</document>
